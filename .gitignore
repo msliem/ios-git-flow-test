@@ -1,0 +1,120 @@
+*.iml
+.gradle
+.idea
+.DS_Store
+build
+captures
+.externalNativeBuild
+.cxx
+local.properties
+xcuserdata
+.kotlin
+
+# macOS System Files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+githooks/
+Git-Hooks/
+
+# Thumbnails
+._*
+
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## User settings
+xcuserdata/
+
+## Build products
+build/
+DerivedData/
+*.o
+*.linkfilelist
+*.hmap
+
+## Index & intermediate build files
+*.xcuserstate
+*.xcscmblueprint
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+.build/
+.swiftpm
+# If you don’t want to check in dependencies:
+# Packages/
+# Package.pins
+# Package.resolved
+# *.xcodeproj
+
+# CocoaPods
+# If you don’t want to check in dependencies:
+# Pods/
+# If you don’t want to check in the Xcode workspace:
+# *.xcworkspace
+
+# Carthage
+Carthage/Build/
+# If you don’t want to check in dependencies:
+# Carthage/Checkouts/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Accio dependency manager
+Dependencies/
+.accio/
+
+# Tuist
+/.tuist-cache
+/Tuist/Dependencies/
+
+# iOS device logs
+*.log
+
+# App sandbox & provisioning
+*.mobileprovision
+*.provisionprofile
+*.entitlements
+
+# Xcode Project's workspace settings
+*.xcworkspace/xcuserdata/
+
+# Other IDEs
+.idea/
+.vscode/
+
+# Archives
+*.zip
+*.tar.gz
+
+# Crash reports
+*.crash
+
+# Build phases temp
+*.dep
+
+# Xcode user data
+xcuserdata/
+xcshareddata/
+
+# Xcode workspaces
+*.xcworkspace/contents.xcworkspacedata
+*.xcworkspace/xcshareddata/
