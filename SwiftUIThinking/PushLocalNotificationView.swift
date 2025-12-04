@@ -84,13 +84,6 @@ final class NotificationAuthorizationManager: NSObject {
     
 }
 
-//
-/*
-let content = UNNotificationContent()
-remote notification used by system to handle data received by APNs, no manual creation
- */
-
-
 final class NotificationPushManager: NSObject, UNUserNotificationCenterDelegate {
     
     let center = UNUserNotificationCenter.current()
