@@ -3,3 +3,6 @@
 
 # 1.1.0
 - feature two
+
+#hotfix 1.1.0
+- fixing feature.
