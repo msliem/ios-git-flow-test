@@ -15,3 +15,6 @@
 
 #hotfix 1.1.0-01
 - fixing feature.
+
+#1.3.0
+- remove git config
