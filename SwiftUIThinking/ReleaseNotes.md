@@ -18,3 +18,6 @@
 
 #1.3.0
 - remove git config
+
+#HOTFIX 1.3.0
+- RELEASE HOTFIX
