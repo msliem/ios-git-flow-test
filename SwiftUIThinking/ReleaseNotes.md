@@ -6,3 +6,6 @@
 
 # 1.2.0
 - feature three
+
+#hotfix 1.1.0
+- fixing feature.
