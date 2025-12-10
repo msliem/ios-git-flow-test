@@ -12,7 +12,7 @@ struct ButtonView: View {
         Button {
             print("Button Tapped")
         } label: {
-            Text("Tap Me")
+            Text("Tap it")
                 .font(.headline)
                 .fontWeight(.bold)
                 .background(
