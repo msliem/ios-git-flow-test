@@ -40,7 +40,7 @@ struct ReusablePasswordField: View {
                 }
             }
             .padding(.horizontal)
-            .padding(.vertical, 12)
+            .padding(.vertical, 16)
             .background(Color(.secondarySystemBackground))
             .cornerRadius(10)
         }
