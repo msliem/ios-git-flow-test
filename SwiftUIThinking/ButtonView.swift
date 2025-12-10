@@ -10,7 +10,7 @@ import SwiftUI
 struct ButtonView: View {
     var body: some View {
         Button {
-            print("Button Tapped")
+            print("Tapped Button")
         } label: {
             Text("Tap it")
                 .font(.headline)
