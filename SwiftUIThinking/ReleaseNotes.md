@@ -30,3 +30,6 @@
 
 # 1.5.0
 - Add feature six
+
+# 1.6.0 
+- Add feature seven
