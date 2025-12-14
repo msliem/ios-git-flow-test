@@ -40,7 +40,7 @@ struct DropDownView<Option: Hashable & CustomStringConvertible>: View {
                 }
                 .padding()
                 .background(
-                    RoundedRectangle(cornerRadius: 12)
+                    RoundedRectangle(cornerRadius: 11)
                         .stroke(Color.gray.opacity(0.4))
                 )
             }
