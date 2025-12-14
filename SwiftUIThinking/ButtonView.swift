@@ -9,11 +9,13 @@ import SwiftUI
 
 struct PrimaryButton: View {
     let title: String
+    let color: Color
     let action: () -> Void
 
-    init(title: String, action: @escaping () -> Void) {
+    init(title: String, color: Color, action: @escaping () -> Void) {
         self.title = title
         self.action = action
+        self.color = color
     }
 
     var body: some View {
@@ -26,7 +28,7 @@ struct PrimaryButton: View {
                 .padding(.vertical, 12)
                 .background(
                     RoundedRectangle(cornerRadius: 12)
-                        .fill(Color.blue)
+                        .fill(color)
                 )
         }
     }
@@ -34,7 +36,7 @@ struct PrimaryButton: View {
 
 struct ButtonView: View {
     var body: some View {
-        PrimaryButton(title: "Tap it") {
+        PrimaryButton(title: "Tap it", color: .yellow) {
             print("Tapped Button")
         }
     }
