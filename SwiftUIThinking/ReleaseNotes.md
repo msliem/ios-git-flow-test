@@ -33,3 +33,6 @@
 
 # 1.6.0 
 - Add feature seven
+
+# 1.7.0 
+- Add feature eight
