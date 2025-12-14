@@ -27,3 +27,6 @@
 
 # 1.4.0
 - Add feature five
+
+# 1.5.0
+- Add feature six
