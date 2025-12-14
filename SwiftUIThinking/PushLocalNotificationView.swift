@@ -45,7 +45,7 @@ struct PushLocalNotificationView: View {
     private func pushNotification() {
         notificationPusher.pushInstantNotification(
             title: "Testing Notification",
-            body: "Testing Notification Body (from SwiftUI_Thinking)"
+            body: "Testing Notification Body"
         )
     }
     
