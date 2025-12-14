@@ -3,6 +3,9 @@
 #1.2.0 
 - Feature [one - two - 3]
 
+# 1.4.0 
+- Feature [Four - Five]
+
 # Staging
 #  1.0.0
 - feature one
