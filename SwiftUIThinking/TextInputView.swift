@@ -7,12 +7,71 @@
 
 import SwiftUI
 
-struct TextInputView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+struct DropDownView<Option: Hashable & CustomStringConvertible>: View {
 
-#Preview {
-    TextInputView()
+    // MARK: - Public API
+    let title: String
+    let options: [Option]
+    @Binding var selection: Option?
+
+    // MARK: - State
+    @State private var isExpanded = false
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+
+            Text(title)
+                .font(.caption)
+                .foregroundColor(.secondary)
+
+            Button {
+                withAnimation(.easeInOut) {
+                    isExpanded.toggle()
+                }
+            } label: {
+                HStack {
+                    Text(selection?.description ?? "Select")
+                        .foregroundColor(selection == nil ? .secondary : .primary)
+
+                    Spacer()
+
+                    Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
+                        .foregroundColor(.secondary)
+                }
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(Color.gray.opacity(0.4))
+                )
+            }
+
+            if isExpanded {
+                VStack(spacing: 0) {
+                    ForEach(options, id: \.self) { option in
+                        Button {
+                            selection = option
+                            withAnimation(.easeInOut) {
+                                isExpanded = false
+                            }
+                        } label: {
+                            HStack {
+                                Text(option.description)
+                                Spacer()
+                            }
+                            .padding()
+                        }
+
+                        if option != options.last {
+                            Divider()
+                        }
+                    }
+                }
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(Color(.systemBackground))
+                        .shadow(radius: 4)
+                )
+            }
+        }
+    }
 }
