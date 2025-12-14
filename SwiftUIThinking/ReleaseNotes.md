@@ -3,10 +3,13 @@
 - feature one
 
 # 1.1.0
-- feature two
+- feature two (1)
 
 # 1.1.0-rc-02
 - Fix button view.
 
 # 1.2.0
 - Fix Bordered Text
+
+# 1.3.0
+- Add feature four
