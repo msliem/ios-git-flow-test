@@ -9,26 +9,49 @@ import SwiftUI
 
 struct BorderedText: View {
     let text: String
-    
-    // Customizable properties
-    var font: Font = .body
-    var textColor: Color = .primary
-    var borderColor: Color = .blue
-    var cornerRadius: CGFloat = 12
-    var horizontalPadding: CGFloat = 12
-    var verticalPadding: CGFloat = 8
-    var lineLimit: Int? = nil
+    var style: BorderedTextStyle = .default
 
     var body: some View {
         Text(text)
-            .font(font)
-            .foregroundColor(textColor)
-            .lineLimit(lineLimit)
-            .padding(.vertical, verticalPadding)
-            .padding(.horizontal, horizontalPadding)
+            .modifier(BorderedTextModifier(style: style))
+    }
+}
+
+private struct BorderedTextModifier: ViewModifier {
+    let style: BorderedTextStyle
+
+    func body(content: Content) -> some View {
+        content
+            .font(style.font)
+            .foregroundColor(style.textColor)
+            .lineLimit(style.lineLimit)
+            .padding(.vertical, style.verticalPadding)
+            .padding(.horizontal, style.horizontalPadding)
             .overlay(
-                RoundedRectangle(cornerRadius: cornerRadius)
-                    .stroke(borderColor, lineWidth: 1.5)
+                RoundedRectangle(cornerRadius: style.cornerRadius)
+                    .stroke(style.borderColor, lineWidth: style.borderWidth)
             )
     }
+}
+
+struct BorderedTextStyle {
+    var font: Font
+    var textColor: Color
+    var borderColor: Color
+    var borderWidth: CGFloat
+    var cornerRadius: CGFloat
+    var horizontalPadding: CGFloat
+    var verticalPadding: CGFloat
+    var lineLimit: Int?
+
+    static let `default` = BorderedTextStyle(
+        font: .body,
+        textColor: .primary,
+        borderColor: .blue,
+        borderWidth: 1.5,
+        cornerRadius: 12,
+        horizontalPadding: 12,
+        verticalPadding: 8,
+        lineLimit: nil
+    )
 }
