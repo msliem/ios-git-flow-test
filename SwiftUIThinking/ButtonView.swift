@@ -7,17 +7,35 @@
 
 import SwiftUI
 
-struct ButtonView: View {
+struct PrimaryButton: View {
+    let title: String
+    let action: () -> Void
+
+    init(title: String, action: @escaping () -> Void) {
+        self.title = title
+        self.action = action
+    }
+
     var body: some View {
-        Button {
-            print("Tapped Button")
-        } label: {
-            Text("Tap it")
+        Button(action: action) {
+            Text(title)
                 .font(.headline)
                 .fontWeight(.bold)
+                .foregroundStyle(.white)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 12)
                 .background(
-                    Rectangle().fill(.blue)
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(Color.blue)
                 )
+        }
+    }
+}
+
+struct ButtonView: View {
+    var body: some View {
+        PrimaryButton(title: "Tap it") {
+            print("Tapped Button")
         }
     }
 }
