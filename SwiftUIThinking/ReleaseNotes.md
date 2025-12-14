@@ -4,3 +4,6 @@
 
 # 1.1.0
 - feature two
+
+# 1.1.0-rc-02
+- Fix button view.
