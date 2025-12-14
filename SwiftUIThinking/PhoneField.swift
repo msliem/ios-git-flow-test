@@ -10,21 +10,40 @@ import SwiftUI
 
 struct PhoneField: View {
     @Binding var phoneNumber: String
-    var placeholder: String = "Phone Number"
-    var prefix: String = "+20" // Change as needed
+    let title: String
+    let prefix: String
+    let showsDivider: Bool
+
+    init(
+        title: String = "Phone Number",
+        prefix: String = "+20",
+        showsDivider: Bool = true,
+        phoneNumber: Binding<String>
+    ) {
+        self.title = title
+        self.prefix = prefix
+        self.showsDivider = showsDivider
+        self._phoneNumber = phoneNumber
+    }
 
     var body: some View {
-        HStack {
+        HStack(spacing: 8) {
             Text(prefix)
-                .padding(.leading, 8)
+                .font(.callout)
                 .foregroundStyle(.secondary)
 
-            TextField(placeholder, text: $phoneNumber)
+            if showsDivider {
+                Divider()
+                    .frame(height: 20)
+            }
+
+            TextField(title, text: $phoneNumber)
                 .keyboardType(.phonePad)
                 .textContentType(.telephoneNumber)
+                .font(.callout)
                 .padding(.vertical, 10)
         }
-        .padding(.horizontal)
+        .padding(.horizontal, 12)
         .background(
             RoundedRectangle(cornerRadius: 12)
                 .stroke(Color.gray.opacity(0.3), lineWidth: 1)
