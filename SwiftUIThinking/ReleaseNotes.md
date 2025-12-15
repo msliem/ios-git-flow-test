@@ -12,6 +12,9 @@
 # 1.7.0 
 - Feature [six - seven - eight]
 
+#1.7.1
+- HotFix
+
 # Staging
 #  1.0.0
 - feature one
