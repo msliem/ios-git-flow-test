@@ -29,7 +29,7 @@ private struct BorderedTextModifier: ViewModifier {
             .padding(.horizontal, style.horizontalPadding)
             .overlay(
                 RoundedRectangle(cornerRadius: style.cornerRadius)
-                    .stroke(style.borderColor, lineWidth: style.borderWidth)
+                    .stroke(style.borderColor, lineWidth: style.horizontalPadding)
             )
     }
 }

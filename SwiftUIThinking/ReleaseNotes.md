@@ -15,6 +15,9 @@
 #1.7.1
 - HotFix
 
+#1.7.2
+- HotFix
+
 # Staging
 #  1.0.0
 - feature one
