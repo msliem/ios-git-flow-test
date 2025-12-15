@@ -42,3 +42,6 @@
 
 # 1.7.0 
 - Add feature eight
+
+# 1.8.0
+- Add feature nine
