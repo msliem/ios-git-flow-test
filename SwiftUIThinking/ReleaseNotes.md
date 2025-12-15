@@ -9,6 +9,9 @@
 # 1.4.1 
 - HotFix
 
+# 1.7.0 
+- Feature [six - seven - eight]
+
 # Staging
 #  1.0.0
 - feature one
