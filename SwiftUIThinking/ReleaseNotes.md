@@ -10,3 +10,6 @@
 
 # 1.2.0
 - Feature three
+
+# 1.2.0-rc-02
+- fix feature three
