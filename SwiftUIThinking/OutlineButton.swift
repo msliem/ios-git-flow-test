@@ -27,7 +27,7 @@ struct OutlineButton: View {
                 .frame(maxWidth: .infinity)
                 .overlay(
                     RoundedRectangle(cornerRadius: cornerRadius)
-                        .stroke(borderColor, lineWidth: 1.5)
+                        .stroke(borderColor, lineWidth: 1)
                 )
         }
     }
