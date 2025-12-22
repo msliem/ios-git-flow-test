@@ -25,12 +25,12 @@ REMOTE="origin"
 # Enable platform-specific tags (true/false)
 # When true: versions include platform prefix (android-1.2.3-rc-01)
 # When false: legacy single-environment mode (1.2.3-rc-01)
-PLATFORM_SPECIFIC_TAGS=true
+PLATFORM_SPECIFIC_TAGS=false
 
 # List of ALL supported platforms (required when PLATFORM_SPECIFIC_TAGS=true)
 # Format: space-separated list of platform names
 # Example: PLATFORMS="android ios web"
-PLATFORMS="android ios shared"
+PLATFORMS=""
 
 # Classification of platforms for intelligent propagation
 # Required when PLATFORM_SPECIFIC_TAGS=true
@@ -40,14 +40,14 @@ PLATFORMS="android ios shared"
 # Changes to common platforms propagate to all dependent platforms
 # Format: space-separated list
 # Example: COMMON_PLATFORMS="shared core"
-COMMON_PLATFORMS="shared"
+COMMON_PLATFORMS=""
 
 # INDEPENDENT platforms: Platform-specific code
 # Example: android, ios, web, desktop
 # Changes stay within the same platform (no cross-platform propagation)
 # Format: space-separated list
 # Example: INDEPENDENT_PLATFORMS="android ios web"
-INDEPENDENT_PLATFORMS="android ios"
+INDEPENDENT_PLATFORMS=""
 
 # =============================================================================
 # BRANCH PREFIX CONFIGURATION (Required for internal operations)
