@@ -19,7 +19,7 @@ struct PushLocalNotificationView: View {
     
     var body: some View {
         VStack {
-            Text("Notification Permission: \(notificationAuthorizationManager.permission)")
+            Text(": \(notificationAuthorizationManager.permission)")
             pushNotificationButton
         }
         .onAppear {
