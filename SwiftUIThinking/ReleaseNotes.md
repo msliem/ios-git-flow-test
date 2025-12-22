@@ -7,3 +7,6 @@
 
 # 1.1.0
 - Feature two
+
+# 1.2.0
+- Feature three
