@@ -11,8 +11,8 @@ struct ReusablePasswordField: View {
     
     @Binding var text: String
     var title: String = "Password"
-    var placeholder: String = "Enter"
-    
+    var placeholder: String = "Enter Password ..."
+
     @State private var isSecure: Bool = true
     
     var body: some View {
