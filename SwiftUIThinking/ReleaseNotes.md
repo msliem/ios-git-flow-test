@@ -19,3 +19,6 @@
 
 # 1.2.0-rc-02
 - fix feature three
+
+# 1.4.0 
+- add feature
