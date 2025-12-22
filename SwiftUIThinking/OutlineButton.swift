@@ -11,11 +11,11 @@ import SwiftUI
 struct OutlineButton: View {
     let title: String
     let action: () -> Void
-    var cornerRadius: CGFloat = 12
+    var cornerRadius: CGFloat = 16
     var borderColor: Color = .blue
     var textColor: Color = .blue
     var horizontalPadding: CGFloat = 16
-    var verticalPadding: CGFloat = 11
+    var verticalPadding: CGFloat = 16
 
     var body: some View {
         Button(action: action) {
