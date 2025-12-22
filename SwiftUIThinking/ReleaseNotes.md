@@ -6,6 +6,9 @@
 # 1.3.1
 - fix features 
 
+# 1.4.0 
+- FEATURES 
+
 #Staging 
 
 # 1.0.0
@@ -19,3 +22,6 @@
 
 # 1.2.0-rc-02
 - fix feature three
+
+# 1.4.0 
+- add feature
