@@ -27,10 +27,27 @@ REMOTE="origin"
 # When false: legacy single-environment mode (1.2.3-rc-01)
 PLATFORM_SPECIFIC_TAGS=true
 
-# List of supported platforms (required when PLATFORM_SPECIFIC_TAGS=true)
+# List of ALL supported platforms (required when PLATFORM_SPECIFIC_TAGS=true)
 # Format: space-separated list of platform names
 # Example: PLATFORMS="android ios web"
-PLATFORMS="android ios shared"
+PLATFORMS=""
+
+# Classification of platforms for intelligent propagation
+# Required when PLATFORM_SPECIFIC_TAGS=true
+
+# COMMON platforms: Shared code that other platforms depend on
+# Example: shared modules, core libraries, common code
+# Changes to common platforms propagate to all dependent platforms
+# Format: space-separated list
+# Example: COMMON_PLATFORMS="shared core"
+COMMON_PLATFORMS=""
+
+# INDEPENDENT platforms: Platform-specific code
+# Example: android, ios, web, desktop
+# Changes stay within the same platform (no cross-platform propagation)
+# Format: space-separated list
+# Example: INDEPENDENT_PLATFORMS="android ios web"
+INDEPENDENT_PLATFORMS="android ios shared"
 
 # =============================================================================
 # BRANCH PREFIX CONFIGURATION (Required for internal operations)
@@ -148,8 +165,10 @@ REMOTE_TAG_CACHE_DURATION=300
 
 # Example 6: Multi-platform configuration (KMP project)
 # PLATFORM_SPECIFIC_TAGS=true
-# PLATFORMS="android ios"
-# # Version format: android-1.2.3-rc-01, ios-2.0.1-rc-02
+# PLATFORMS="shared android ios"
+# COMMON_PLATFORMS="shared"
+# INDEPENDENT_PLATFORMS="android ios"
+# # Version format: shared-1.2.3-rc-01, android-2.0.1-rc-02, ios-2.0.1-rc-02
 
 # Example 7: CI/CD configuration
 # GIT_FLOW_NON_INTERACTIVE=true
@@ -163,10 +182,14 @@ REMOTE_TAG_CACHE_DURATION=300
 
 # Example 9: Multi-platform with custom platforms
 # PLATFORM_SPECIFIC_TAGS=true
-# PLATFORMS="mobile web desktop server"
-# # Version format: mobile-1-0-0-rc-01, web-1-0-0-rc-01, etc.
+# PLATFORMS="core mobile web desktop server"
+# COMMON_PLATFORMS="core"
+# INDEPENDENT_PLATFORMS="mobile web desktop server"
+# # Version format: core-1-0-0-rc-01, mobile-1-0-0-rc-01, etc.
 
 # Example 10: Legacy single-environment mode (default)
 # PLATFORM_SPECIFIC_TAGS=false
 # PLATFORMS=""
+# COMMON_PLATFORMS=""
+# INDEPENDENT_PLATFORMS=""
 # # Version format: 1.2.3-rc-01
