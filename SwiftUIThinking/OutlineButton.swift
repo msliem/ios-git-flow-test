@@ -14,7 +14,7 @@ struct OutlineButton: View {
     var cornerRadius: CGFloat = 16
     var borderColor: Color = .blue
     var textColor: Color = .blue
-    var horizontalPadding: CGFloat = 16
+    var horizontalPadding: CGFloat = 12
     var verticalPadding: CGFloat = 16
 
     var body: some View {
