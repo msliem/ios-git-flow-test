@@ -10,7 +10,7 @@ import SwiftUI
 struct ReusablePasswordField: View {
     
     @Binding var text: String
-    var title: String = "Password"
+    var title: String = "Pass"
     var placeholder: String = "Enter Password ..."
 
     @State private var isSecure: Bool = true
