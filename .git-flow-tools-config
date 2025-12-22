@@ -30,7 +30,7 @@ PLATFORM_SPECIFIC_TAGS=true
 # List of ALL supported platforms (required when PLATFORM_SPECIFIC_TAGS=true)
 # Format: space-separated list of platform names
 # Example: PLATFORMS="android ios web"
-PLATFORMS=""
+PLATFORMS="android ios shared"
 
 # Classification of platforms for intelligent propagation
 # Required when PLATFORM_SPECIFIC_TAGS=true
@@ -40,14 +40,14 @@ PLATFORMS=""
 # Changes to common platforms propagate to all dependent platforms
 # Format: space-separated list
 # Example: COMMON_PLATFORMS="shared core"
-COMMON_PLATFORMS=""
+COMMON_PLATFORMS="shared"
 
 # INDEPENDENT platforms: Platform-specific code
 # Example: android, ios, web, desktop
 # Changes stay within the same platform (no cross-platform propagation)
 # Format: space-separated list
 # Example: INDEPENDENT_PLATFORMS="android ios web"
-INDEPENDENT_PLATFORMS="android ios shared"
+INDEPENDENT_PLATFORMS="android ios"
 
 # =============================================================================
 # BRANCH PREFIX CONFIGURATION (Required for internal operations)
