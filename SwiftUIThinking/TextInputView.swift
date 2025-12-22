@@ -30,7 +30,7 @@ struct DropDownView<Option: Hashable & CustomStringConvertible>: View {
                 }
             } label: {
                 HStack {
-                    Text(selection?.description ?? "Select")
+                    Text(selection?.description ?? "Select Sec")
                         .foregroundColor(selection == nil ? .secondary : .primary)
 
                     Spacer()
