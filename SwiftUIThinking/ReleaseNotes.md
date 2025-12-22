@@ -26,5 +26,8 @@
 # 1.4.0 
 - add feature
 
+# 1.4.1 
+- fix features
+
 # 1.5.0
 - Add feature
