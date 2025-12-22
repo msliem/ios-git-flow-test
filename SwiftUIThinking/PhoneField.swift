@@ -15,7 +15,7 @@ struct PhoneField: View {
     let showsDivider: Bool
 
     init(
-        title: String = "Phone Number",
+        title: String = "Phone",
         prefix: String = "+996",
         showsDivider: Bool = true,
         phoneNumber: Binding<String>
