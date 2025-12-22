@@ -6,6 +6,9 @@
 # 1.3.1
 - fix features 
 
+# 1.4.0 
+- FEATURES 
+
 #Staging 
 
 # 1.0.0
