@@ -60,10 +60,6 @@ struct DropDownView<Option: Hashable & CustomStringConvertible>: View {
                             }
                             .padding()
                         }
-
-                        if option != options.last {
-                            Divider()
-                        }
                     }
                 }
                 .background(
